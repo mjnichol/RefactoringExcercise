@@ -23,4 +23,13 @@ public class Rental {
 	public Movie getMovie() {
 		return _movie;
 	}
+
+	/* getCharge method added to remove feature envy */
+	public double getCharge() {
+		return _movie.getCharge(this);
+	}
+
+	public PriceCode getPriceCodeObject() {
+		return this._movie.getPriceCode();
+	}
 }
